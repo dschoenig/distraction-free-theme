@@ -43,7 +43,7 @@
    `(writegood-passive-voice-face ((,class (:foreground ,black :background "#b2df8a" :underline nil))))
    `(writegood-duplicates-face ((,class (:foreground ,black :background "#cab2d6" :underline nil))))
 
-;; Mode line faces
+   ;; Mode line faces
    `(mode-line ((,class (:box (:line-width -1 :style released-button)
 			      :background "#e5e5e5" :foreground ,dgray))))
    `(mode-line-inactive ((,class (:box (:line-width -1 :style released-button)
@@ -82,7 +82,7 @@
    `(link-visited ((,class (:underline t :foreground ,dgray))))
 
    ;; Show-paren
-   `(show-paren-match ((t (:background ,white))))
+   `(show-paren-match ((t (:foreground ,black :background ,white :underline t))))
    `(show-paren-mismatch ((t (:background "red"))))
 
    ;; Speedbar
@@ -211,7 +211,35 @@
 
   (custom-theme-set-variables
    'distraction-free
-   `(ansi-color-names-vector [,white ,dgray ,lgray ,sgray])))
+   `(ansi-color-names-vector [,white ,dgray ,lgray ,sgray, blue, lblue])))
+
+;; Focus for distraction-free spacemacs layer
+(defun distraction-free-focus-on ()
+  (interactive)
+  (set-face-attribute 'default nil :foreground "#d4d4d4" :background "#f5f5f5")
+  (set-face-attribute 'font-lock-builtin-face nil :foreground "#d4d4d4")
+  (set-face-attribute 'font-lock-comment-face nil :foreground "#d4d4d4")
+  (set-face-attribute 'font-lock-constant-face nil :foreground "#d4d4d4")
+  (set-face-attribute 'font-lock-function-name-face nil :foreground "#d4d4d4")
+  (set-face-attribute 'font-lock-keyword-face nil :foreground "#d4d4d4")
+  (set-face-attribute 'font-lock-string-face nil :foreground "#d4d4d4")
+  (set-face-attribute 'font-lock-type-face nil :foreground "#d4d4d4")
+  (set-face-attribute 'font-lock-variable-name-face nil :foreground "#d4d4d4")
+  (set-face-attribute 'font-lock-warning-face nil :foreground "#d4d4d4")
+  (set-face-attribute 'sp-show-pair-match-face nil :foreground "#d4d4d4"))
+
+(defun distraction-free-focus-off ()
+  (interactive)
+  (set-face-attribute 'default nil :foreground "#141414" :background "#f5f5f5")
+  (set-face-attribute 'font-lock-builtin-face nil :foreground "#303030")
+  (set-face-attribute 'font-lock-comment-face nil :foreground "#606060")
+  (set-face-attribute 'font-lock-constant-face nil :foreground "#303030")
+  (set-face-attribute 'font-lock-function-name-face nil :foreground "#141414")
+  (set-face-attribute 'font-lock-keyword-face nil :foreground "#141414")
+  (set-face-attribute 'font-lock-string-face nil :foreground "#606060")
+  (set-face-attribute 'font-lock-type-face nil :foreground "#303030")
+  (set-face-attribute 'font-lock-variable-name-face nil :foreground "#d4d4d4")
+  (set-face-attribute 'font-lock-warning-face nil :foreground "1dafe6"))
 
 ;; Autoload for MELPA
 
