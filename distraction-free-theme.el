@@ -38,7 +38,12 @@
    `(linum ((,class (:foreground ,dgray))))
    `(trailing-whitespace ((,class (:background ,lblue))))
 
-   ;; Mode line faces
+   ;; writegood-mode faces
+   `(writegood-weasels-face ((,class (:foreground ,black :background "#fb9a99" :underline nil))))
+   `(writegood-passive-voice-face ((,class (:foreground ,black :background "#b2df8a" :underline nil))))
+   `(writegood-duplicates-face ((,class (:foreground ,black :background "#cab2d6" :underline nil))))
+
+;; Mode line faces
    `(mode-line ((,class (:box (:line-width -1 :style released-button)
 			      :background "#e5e5e5" :foreground ,dgray))))
    `(mode-line-inactive ((,class (:box (:line-width -1 :style released-button)
