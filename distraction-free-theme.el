@@ -33,10 +33,36 @@
    `(highlight ((,class (:foreground ,black :background ,white))))
    `(region ((,class (:foreground ,black :background ,lblue))))
    `(secondary-selection ((,class (:foreground: ,black :background ,lgray))))
-   `(isearch ((,class (:foreground ,white :background ,dgray))))
+   `(isearch ((,class (:foreground ,white :background ,sgray))))
    `(lazy-highlight ((,class (:foreground ,black :background ,lgray))))
    `(linum ((,class (:foreground ,dgray))))
    `(trailing-whitespace ((,class (:background ,lblue))))
+
+;; auto-complete and popups
+   `(ac-completion-face ((,class (:background ,white :foreground ,dgray))))
+   `(tooltip ((,class (:background ,white :foreground ,dgray :bold nil :italic nil :underline nil))))
+   `(popup-enu-selection-face ((,class (:background ,white :foreground ,dgray))))
+   `(popup-face ((,class (:background ,white :foreground ,dgray))))
+   `(popup-isearch-match ((,class (:inherit match))))
+   `(popup-menu-face ((,class (:background ,white :foreground ,dgray))))
+   `(popup-menu-mouse-face ((,class (:inherit highlight))))
+   `(popup-scroll-bar-background-face ((,class (:background ,lgray))))
+   `(popup-scroll-bar-foreground-face ((,class (:background ,dgray))))
+   `(popup-tip-face ((,class (:background ,white :foreground ,dgray :bold nil :italic nil :underline nil))))
+   `(company-echo-common ((,class (:background ,dgray :foreground ,white))))
+   `(company-preview ((,class (:background ,white :foreground ,dgray))))
+   `(company-preview-common ((,class (:background ,white :foreground ,dgray))))
+   `(company-preview-search ((,class (:inherit match))))
+   `(company-scrollbar-bg ((,class (:background ,lgray))))
+   `(company-scrollbar-fg ((,class (:background ,dgray))))
+   `(company-template-field ((,class (:inherit region))))
+   `(company-tooltip ((,class (:background ,lgray :foreground ,dgray))))
+   `(company-tooltip-annotation ((,class (:foreground ,dgray))))
+   `(company-tooltip-common ((,class (:background ,lgray :foreground ,dgray :underline t))))
+   `(company-tooltip-common-selection ((,class (:foreground ,dgray))))
+   `(company-tooltip-mouse ((,class (:inherit highlight))))
+   `(company-tooltip-search ((,class (:inherit match))))
+   `(company-tooltip-selection ((,class (:background ,lblue, :foreground ,dgray))))
 
    ;; writegood-mode faces
    `(writegood-weasels-face ((,class (:foreground ,black :background "#fb9a99" :underline nil))))
@@ -82,8 +108,8 @@
    `(link-visited ((,class (:underline t :foreground ,dgray))))
 
    ;; Show-paren
-   `(show-paren-match ((t (:foreground ,black :background ,white :underline t))))
-   `(show-paren-mismatch ((t (:background "red"))))
+   `(show-paren-match ((t (:foreground ,black :underline nil :weight bold))))
+   `(show-paren-mismatch ((t (:underline "red"))))
 
    ;; Speedbar
    `(speedbar-button-face ((,class (:foreground ,lgray))))
