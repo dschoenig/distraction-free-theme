@@ -40,15 +40,15 @@
 
 ;; auto-complete and popups
    `(ac-completion-face ((,class (:background ,white :foreground ,dgray))))
-   `(tooltip ((,class (:background ,white :foreground ,dgray :bold nil :italic nil :underline nil))))
-   `(popup-enu-selection-face ((,class (:background ,white :foreground ,dgray))))
-   `(popup-face ((,class (:background ,white :foreground ,dgray))))
-   `(popup-isearch-match ((,class (:inherit match))))
-   `(popup-menu-face ((,class (:background ,white :foreground ,dgray))))
-   `(popup-menu-mouse-face ((,class (:inherit highlight))))
-   `(popup-scroll-bar-background-face ((,class (:background ,lgray))))
-   `(popup-scroll-bar-foreground-face ((,class (:background ,dgray))))
-   `(popup-tip-face ((,class (:background ,white :foreground ,dgray :bold nil :italic nil :underline nil))))
+   ;; `(tooltip ((,class (:background ,white :foreground ,dgray :bold nil :italic nil :underline nil))))
+   ;; `(popup-enu-selection-face ((,class (:background ,white :foreground ,dgray))))
+   ;; `(popup-face ((,class (:background ,white :foreground ,dgray))))
+   ;; `(popup-isearch-match ((,class (:inherit match))))
+   ;; `(popup-menu-face ((,class (:background ,white :foreground ,dgray))))
+   ;; `(popup-menu-mouse-face ((,class (:inherit highlight))))
+   ;; `(popup-scroll-bar-background-face ((,class (:background ,lgray))))
+   ;; `(popup-scroll-bar-foreground-face ((,class (:background ,dgray))))
+   ;; `(popup-tip-face ((,class (:background ,white :foreground ,dgray :bold nil :italic nil :underline nil))))
    `(company-echo-common ((,class (:background ,dgray :foreground ,white))))
    `(company-preview ((,class (:background ,white :foreground ,dgray))))
    `(company-preview-common ((,class (:background ,white :foreground ,dgray))))
@@ -98,14 +98,17 @@
    `(font-lock-constant-face ((,class (:weight bold :foreground ,dgray))))
    `(font-lock-function-name-face ((,class (:foreground ,black))))
    `(font-lock-keyword-face ((,class (:weight bold :foreground ,black))))
-   `(font-lock-string-face ((,class (:foreground ,sgray))))
+   `(font-lock-string-face ((,class (:slant italic :foreground ,black))))
    `(font-lock-type-face ((,class (:weight bold :foreground ,dgray))))
-   `(font-lock-variable-name-face ((,class (:weight bold :foreground ,lgray))))
+   `(font-lock-variable-name-face ((,class (:weight bold :foreground ,dgray))))
    `(font-lock-warning-face ((,class (:foreground ,blue))))
 
    ;; Button and link faces
    `(link ((,class (:underline t :foreground ,dgray))))
    `(link-visited ((,class (:underline t :foreground ,dgray))))
+
+   ;; Markdown mode
+   `(markdown-italic-face ((,class (:underline nil :slant italic))))
 
    ;; Show-paren
    `(show-paren-match ((t (:foreground ,black :underline nil :weight bold))))
