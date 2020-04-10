@@ -38,7 +38,7 @@
    `(linum ((,class (:foreground ,dgray))))
    `(trailing-whitespace ((,class (:background ,lblue))))
 
-;; auto-complete and popups
+   ;; auto-complete and popups
    `(ac-completion-face ((,class (:background ,white :foreground ,dgray))))
    ;; `(tooltip ((,class (:background ,white :foreground ,dgray :bold nil :italic nil :underline nil))))
    ;; `(popup-enu-selection-face ((,class (:background ,white :foreground ,dgray))))
@@ -104,15 +104,15 @@
    `(font-lock-warning-face ((,class (:foreground ,blue))))
 
    ;; Button and link faces
-   `(link ((,class (:underline t :foreground ,dgray))))
-   `(link-visited ((,class (:underline t :foreground ,dgray))))
+   `(link ((,class (:underline nil :foreground ,dgray))))
+   `(link-visited ((,class (:underline nil :foreground ,dgray))))
 
    ;; Markdown mode
    `(markdown-italic-face ((,class (:underline nil :slant italic))))
 
    ;; Show-paren
    `(show-paren-match ((t (:foreground ,black :underline nil :weight bold))))
-   `(show-paren-mismatch ((t (:underline "red"))))
+   `(show-paren-mismatch ((t (:background "red"))))
 
    ;; Speedbar
    `(speedbar-button-face ((,class (:foreground ,lgray))))
@@ -190,7 +190,7 @@
    `(org-level-2 ((t (:bold nil :foreground ,dgray :height 1.2))))
    `(org-level-3 ((t (:bold t :foreground ,dgray :height 1.0))))
    `(org-level-4 ((t (:bold nil :foreground ,dgray :height 1.0))))
-   `(org-link ((t (:foreground ,sgray :underline t))))
+   `(org-link ((t (:foreground ,sgray :underline nil))))
    `(org-todo ((t (:bold t :foreground "red"))))
    `(org-done ((t (:bold t :foreground "green"))))
 
@@ -255,7 +255,10 @@
   (set-face-attribute 'font-lock-type-face nil :foreground "#d4d4d4")
   (set-face-attribute 'font-lock-variable-name-face nil :foreground "#d4d4d4")
   (set-face-attribute 'font-lock-warning-face nil :foreground "#d4d4d4")
-  (set-face-attribute 'sp-show-pair-match-face nil :foreground "#d4d4d4"))
+  (set-face-attribute 'sp-show-pair-match-face nil :foreground "#d4d4d4")
+  (set-face-attribute 'show-paren-match nil :foreground "#d4d4d4")
+  (set-face-attribute 'show-paren-mismatch nil :background "#f5f5f5")
+  )
 
 (defun distraction-free-focus-off ()
   (interactive)
@@ -268,8 +271,11 @@
   (set-face-attribute 'font-lock-string-face nil :foreground "#606060")
   (set-face-attribute 'font-lock-type-face nil :foreground "#303030")
   (set-face-attribute 'font-lock-variable-name-face nil :foreground "#d4d4d4")
-  (set-face-attribute 'font-lock-warning-face nil :foreground "1dafe6"))
-
+  (set-face-attribute 'font-lock-warning-face nil :foreground "1dafe6")
+  (set-face-attribute 'sp-show-pair-match-face nil :foreground "#141414")
+  (set-face-attribute 'show-paren-match nil :foreground "#141414")
+  (set-face-attribute 'show-paren-mismatch nil :background "red")
+  )
 ;; Autoload for MELPA
 
 ;;;###autoload
